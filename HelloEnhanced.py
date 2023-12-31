@@ -13,8 +13,6 @@ def hello(name="world!"):
     print(f"Hello, {name}")
 
 # function with a return value
-
-
 def formatNumber(number):
     return f"{number:,}"
 
