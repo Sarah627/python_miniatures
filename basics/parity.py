@@ -2,7 +2,7 @@
 # implementing how to answer the question if this number is even or odd
 def main():
     x = int(input("enter a number to check:"))
-    if is_even(x):  # change is even to other functions defined beneath :))
+    if is_even(x):  # change is_even to other functions defined beneath :))
         print("even value")
     else:
         print("odd")
