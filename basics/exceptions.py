@@ -5,4 +5,4 @@ while True:
         print("X is not an integer, please enter integer")
     else:
         print(f"x is {x}")
-        exit()
+        break
