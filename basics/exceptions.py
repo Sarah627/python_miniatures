@@ -4,3 +4,4 @@ while True:
         break
     except ValueError:
         print("X is not an integer, please enter integer")
+print(f"x is {x}")
