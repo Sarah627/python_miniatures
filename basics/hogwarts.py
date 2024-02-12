@@ -12,26 +12,32 @@ to the value of each element in the list
 
 for i in range(len(students)):
     # what's between the square brackets is called the index, starts from 0
-    print(i+1, students[i])
+    print(i + 1, students[i])
 
 # using another data type dictionary 'dict' for associating key with a value
 # let's ask the question of Who is in what house? let's solve the problem
 # notice the curly braces
-std = {"Harry": "Gryffindor",
-       "Hermione": "Gryffindor",
-       "Ron": "Gryffindor",
-       "Draco": "Slytherin"}
+std = {
+    "Harry": "Gryffindor",
+    "Hermione": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
 
 for student in std:
-    print(student, std[student], sep=', ')
+    print(student, std[student], sep=", ")
 
 # let's make it more complicated, let's use a list of dictionaries
-s = [{"name": "Harry", "house": "Gryffindor", "patronus": "stag"},
-     {"name": "Hermione", "house": "Gryffindor", "patronus": "otter"},
-     {"name": "Ron", "house": "Gryffindor", "patronus": "jack russell terrier"},
-     {"name": "Draco", "house": "Slytherin", "patronus": None},
-     {"name": "Severus Sanpe", "house": "Slytherin",
-         "patronus": "doe -after all this time?-"}
-     ]
+s = [
+    {"name": "Harry", "house": "Gryffindor", "patronus": "stag"},
+    {"name": "Hermione", "house": "Gryffindor", "patronus": "otter"},
+    {"name": "Ron", "house": "Gryffindor", "patronus": "jack russell terrier"},
+    {"name": "Draco", "house": "Slytherin", "patronus": None},
+    {
+        "name": "Severus Sanpe",
+        "house": "Slytherin",
+        "patronus": "doe -after all this time?-",
+    },
+]
 for person in s:
     print(person["name"], person["house"], person["patronus"], sep=", ")
