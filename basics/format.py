@@ -10,7 +10,6 @@ print(f"Hello, {name}")
 # Implementing the same idea using different approach
 
 Name = input("What's your name? ").strip()
-matches = search(r"^(\w+), ?(\w+)$", Name)
-if matches:
+if matches := search(r"^(\w+), ?(\w+)$", Name):
     Name = matches.group(2)+" "+matches.group(1)
 print(f"Hello, {Name}")
