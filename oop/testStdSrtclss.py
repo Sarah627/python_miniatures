@@ -4,9 +4,12 @@ from sortinghat import Hat
 
 def main():
     Hat.sort()
-    student = Student.get_student()
+    try:
+        student = Student.get_student()
+        print(student)
+    except ValueError:
+        print("Missing Name or House")
     # student.house = "Number Four, Privet Drive "
-    print(student)
 
 
 if __name__ == "__main__":
