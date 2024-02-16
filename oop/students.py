@@ -1,23 +1,27 @@
+from sortinghat import Hat
+
+
 class Student:
     # applying abstraction and encapsulation
     def __init__(self, name, house, patronus=None):
-        self.name = name  # attributes
-        self.house = house
+        self._name = name  # attributes
+        self._house = house
         self.patronus = patronus
 
     def __str__(self):
-        return f"{self.name} from {self.house} and your patronus is {self.charm()}"
+        return f"{self._name} from {self._house} and your patronus:  {self.charm()}"
 
     def charm(self):
         match self.patronus:
             case "Stag":
-                return "🍕"
+                return "🦌"
             case "Otter":
-                return "🍰"
+                return "🦦"
             case "Doe":
-                return "\nLily, After all this time? "
-            case  _:
-                return "🌿"
+                return "\nLily🌺, After all this time? "
+            case _:
+                return "🐍"
+
     # Getter and Setter
 
     @property
@@ -43,6 +47,7 @@ class Student:
 
 
 def main():
+    Hat().sort()
     student = get_student()
     # student.house = "Number Four, Privet Drive "
     print(student)
