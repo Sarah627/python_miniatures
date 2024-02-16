@@ -3,7 +3,7 @@ from sortinghat import Hat
 
 class Student:
     # applying abstraction and encapsulation
-    def __init__(self, name, house, patronus=None):
+    def __init__(self, name, house, patronus):
         self._name = name  # attributes
         self._house = house
         self.patronus = patronus
@@ -45,22 +45,19 @@ class Student:
             raise ValueError("Invalid House")
         self._house = house
 
+    @classmethod
+    def get_student(cls):
+        name = input("What's your name? ")
+        house = input("What's your house? ")
+        patronus = input("What's your patronus? ")
+        return cls(name, house, patronus)
+
 
 def main():
-    Hat().sort()
-    student = get_student()
+    Hat.sort()
+    student = Student.get_student()
     # student.house = "Number Four, Privet Drive "
     print(student)
-
-
-def get_student():
-    name = input("What's your name? ")
-    house = input("What's your house? ")
-    patronus = input("Enter your Patronus: ")
-    try:
-        return Student(name, house, patronus)
-    except ValueError:
-        pass
 
 
 if __name__ == "__main__":
