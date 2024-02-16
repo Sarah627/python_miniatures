@@ -51,14 +51,3 @@ class Student:
         house = input("What's your house? ")
         patronus = input("What's your patronus? ")
         return cls(name, house, patronus)
-
-
-def main():
-    Hat.sort()
-    student = Student.get_student()
-    # student.house = "Number Four, Privet Drive "
-    print(student)
-
-
-if __name__ == "__main__":
-    main()
