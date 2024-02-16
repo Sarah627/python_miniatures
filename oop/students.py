@@ -4,7 +4,11 @@ from sortinghat import Hat
 class Student:
     # applying abstraction and encapsulation
     def __init__(self, name, house, patronus):
+        if not name:
+            raise ValueError("Missing Name")
         self._name = name  # attributes
+        if not house:
+            raise ValueError("Missing house")
         self._house = house
         self.patronus = patronus
 
@@ -22,9 +26,16 @@ class Student:
             case _:
                 return "🐍"
 
-    # Getter and Setter
+    @classmethod
+    def get_student(cls):
+        name = input("What's your name? ")
+        house = input("What's your house? ")
+        patronus = input("What's your patronus? ")
+        return cls(name, house, patronus)
 
-    @property
+
+    # Getter and Setter
+'''    @property
     def name(self):
         return self._name
 
@@ -43,11 +54,4 @@ class Student:
     def house(self, house):
         if house not in ["Gryffindor", "Syltherin", "Hafflbuff", "Ravenclaw"]:
             raise ValueError("Invalid House")
-        self._house = house
-
-    @classmethod
-    def get_student(cls):
-        name = input("What's your name? ")
-        house = input("What's your house? ")
-        patronus = input("What's your patronus? ")
-        return cls(name, house, patronus)
+        self._house = house'''
